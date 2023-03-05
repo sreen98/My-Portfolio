@@ -1,4 +1,5 @@
 import "./App.css";
+import Home from "./components/Home";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Navbar from "./components/Navbar";
@@ -9,11 +10,11 @@ function App() {
   return (
     <main>
       <Routes>
-        {/*  <Navbar /> */}
-        <Route path="/" element={<About />} />
-        <Route path="projects" element={<Projects />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="skills" element={<Skills />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/skills" element={<Skills />} />
       </Routes>
     </main>
   );
