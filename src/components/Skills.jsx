@@ -16,6 +16,7 @@ import {
 } from "react-icons/si";
 import { IconContext } from "react-icons";
 import { GiSkills } from "react-icons/gi";
+
 export default function Skills() {
   useEffect(() => {
     window.scrollTo(0, 0);
