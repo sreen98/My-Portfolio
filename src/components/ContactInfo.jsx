@@ -7,7 +7,7 @@ const ContactInfo = () => {
     <>
       <Navbar />
       <div class="flex justify-center gap-10 p-5  items-center bg-backGround h-screen">
-        <Zoom>
+        <Zoom cascade>
           <a href="https://www.linkedin.com/in/sreenath-p-086531125">
             <FaLinkedinIn size="4rem" />
           </a>
