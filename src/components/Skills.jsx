@@ -16,6 +16,7 @@ import {
 } from "react-icons/si";
 import { IconContext } from "react-icons";
 import { GiSkills } from "react-icons/gi";
+import Navbar from "./Navbar";
 
 export default function Skills() {
   useEffect(() => {
@@ -69,58 +70,65 @@ export default function Skills() {
     ); */
   };
   return (
-    <section id="skills">
-      <div className="flex">
+    <>
+      <Navbar />
+      <div className="flex  bg-backGround h-screen">
         <div className="container px-5 py-5 mx-auto">
-          <div className="text-center mb-10">
-            <GiSkills size="5rem" className="w-10 inline-block mb-2" />
-            <h1 className="sm:text-4xl text-3xl font-medium title-font text-black mb-4">
-              Skills
-            </h1>
-          </div>
-          <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
-            {skills.map((skill) => (
-              <div key={skill} className="p-2 sm:w-1/2 w-full">
-                <div className="bg-gray-800 rounded flex p-4 h-full items-center">
-                  <IconContext.Provider
-                    value={{ color: "#5D9C59", size: "2rem" }}
-                  >
-                    {handleIcon(skill)}
-                  </IconContext.Provider>
-
-                  <span className="title-font font-medium text-white px-4">
-                    {skill}
-                  </span>
-                </div>
+          <div className="grid md:grid-cols-2">
+            <div>
+              <div className="text-center mb-10 ">
+                <GiSkills size="5rem" className="w-10 inline-block mb-2" />
+                <h1 className="sm:text-4xl text-3xl font-medium title-font text-black mb-4">
+                  Skills
+                </h1>
               </div>
-            ))}
-          </div>
-          <div className="text-center mb-10">
-            <VscTools size="5rem" className="w-10 inline-block " />
-            <h1 className="sm:text-4xl text-3xl font-medium title-font text-black mb-4">
-              Tools
-            </h1>
-            <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto"></p>
-          </div>
-          <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
-            {tools.map((skill) => (
-              <div key={skill} className="p-2 sm:w-1/2 w-full">
-                <div className="bg-gray-800 rounded flex p-4 h-full items-center">
-                  <IconContext.Provider
-                    value={{ color: "#5D9C59", size: "2rem" }}
-                  >
-                    {handleIcon(skill)}
-                  </IconContext.Provider>
+              <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+                {skills.map((skill) => (
+                  <div key={skill} className="p-2 sm:w-1/2 w-full">
+                    <div className="bg-gray-800 rounded flex p-4 h-full items-center">
+                      <IconContext.Provider
+                        value={{ color: "#5D9C59", size: "2rem" }}
+                      >
+                        {handleIcon(skill)}
+                      </IconContext.Provider>
 
-                  <span className="title-font font-medium text-white px-4">
-                    {skill}
-                  </span>
-                </div>
+                      <span className="title-font font-medium text-white px-4">
+                        {skill}
+                      </span>
+                    </div>
+                  </div>
+                ))}
               </div>
-            ))}
+            </div>
+
+            <div>
+              <div className="text-center mb-10">
+                <VscTools size="5rem" className="w-10 inline-block mb-2 " />
+                <h1 className="sm:text-4xl text-3xl font-medium title-font text-black mb-4">
+                  Tools
+                </h1>
+              </div>
+              <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2">
+                {tools.map((skill) => (
+                  <div key={skill} className="p-2 sm:w-1/2 w-full">
+                    <div className="bg-gray-800 rounded flex p-4 h-full items-center">
+                      <IconContext.Provider
+                        value={{ color: "#5D9C59", size: "2rem" }}
+                      >
+                        {handleIcon(skill)}
+                      </IconContext.Provider>
+
+                      <span className="title-font font-medium text-white px-4">
+                        {skill}
+                      </span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </section>
+    </>
   );
 }

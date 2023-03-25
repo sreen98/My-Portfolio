@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "./Navbar";
 
 function Resume() {
   const onButtonClick = () => {
@@ -16,14 +17,16 @@ function Resume() {
   };
   return (
     <>
-      <div className="flex">
+      <Navbar />
+      <div className="grid grid-cols-2  items-center bg-backGround h-screen justify-center gap-10 p-5 ">
         <div className="container px-5 py-5 mx-auto">
           <div className="text-center mb-10">
-            <h1 className="sm:text-4xl text-3xl font-medium title-font text-black mb-4">
+            <h1 className="sm:text-4xl text-3xl font-medium title-font text-black mb-4 rounded-full bg-">
               Resume
             </h1>
+            <h2>Please click below button to download my Resume</h2>
             <button
-              class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
+              class="bg-downloadButton1 hover:bg-blue-400 text-gray-800 font-bold m-3 py-2 px-4 rounded inline-flex items-center"
               onClick={() => onButtonClick()}
             >
               <svg
@@ -36,7 +39,13 @@ function Resume() {
               <span>Download</span>
             </button>
           </div>
-          <div className="flex flex-wrap lg:w-4/5 sm:mx-auto sm:mb-2 -mx-2"></div>
+        </div>
+        <div className="right-0">
+          <img
+            class="w-100 h-100 right-0"
+            src="/img/download.png"
+            alt="Rounded avatar"
+          />
         </div>
       </div>
     </>

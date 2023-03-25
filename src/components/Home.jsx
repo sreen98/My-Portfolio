@@ -1,18 +1,28 @@
-import About from "./About";
+import React from "react";
+import { Link } from "react-router-dom";
 import Navbar from "./Navbar";
 
-function Home() {
+export default function About() {
   return (
     <>
       <Navbar />
-      <div
-        className="bg-[url('https://img.freepik.com/free-photo/dark-blue-product-background_53876-92801.jpg?w=996&t=st=1678526067~exp=1678526667~hmac=d6ae1c79b15fe2890f53e7dfe6c27c9280e7f503eb105288be2a7a0767f2a30c')] h-screen"
-        style={{ backgroundColor: "#CBE4DE" }}
-      >
-        <About />
+      <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center  bg-backGround h-screen ">
+        <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+          <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-aboutText">
+            Hi, I'm Sreenath P.
+            <br className="hidden lg:inline-block" />I am a React Developer
+          </h1>
+          {/*  <p className="mb-8 leading-relaxed"></p> */}
+          <div className="flex justify-center">
+            <a
+              href="#"
+              class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
+            >
+              See Work Experience
+            </a>
+          </div>
+        </div>
       </div>
     </>
   );
 }
-
-export default Home;

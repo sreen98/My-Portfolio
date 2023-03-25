@@ -2,13 +2,12 @@ import { SocialIcon } from "react-social-icons";
 import { TbPhone } from "react-icons/tb";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { FiMail } from "react-icons/fi";
+import Navbar from "./Navbar";
 const ContactInfo = () => {
   return (
     <>
-      <div
-        class="flex  justify-center gap-10 p-5  items-center bg-gray-700 h-screen"
-        style={{ backgroundClop: "#2C3333" }}
-      >
+      <Navbar />
+      <div class="flex justify-center gap-10 p-5  items-center bg-backGround h-screen">
         <a href="https://www.linkedin.com/in/sreenath-p-086531125">
           <FaLinkedinIn size="3rem" />
         </a>
