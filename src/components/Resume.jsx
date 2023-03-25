@@ -18,34 +18,27 @@ function Resume() {
   return (
     <>
       <Navbar />
-      <div className="grid grid-cols-2  items-center bg-backGround h-screen justify-center gap-10 p-5 ">
-        <div className="container px-5 py-5 mx-auto">
+      <div className="grid grid-rows-3  gap-4  bg-backGround h-screen">
+        <div className="px-5 py-50 text-center justify-center p-5">
+          <h1 className="sm:text-4xl text-3xl font-medium title-font text-black mb-4">
+            Resume
+          </h1>
+          <h2>Please click below button to download my Resume</h2>
+        </div>
+        <div className="px-5 py-50 row-start-2  items-center justify-center p-5">
           <div className="text-center mb-10">
-            <h1 className="sm:text-4xl text-3xl font-medium title-font text-black mb-4 rounded-full bg-">
-              Resume
-            </h1>
-            <h2>Please click below button to download my Resume</h2>
             <button
               class="bg-downloadButton1 hover:bg-blue-400 text-gray-800 font-bold m-3 py-2 px-4 rounded inline-flex items-center"
               onClick={() => onButtonClick()}
             >
-              <svg
-                class="fill-current w-4 h-4 mr-2"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-              >
-                <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
-              </svg>
+              <img
+                class="w-5 h-5 mr-2 "
+                src="/img/download.png"
+                alt="Rounded avatar"
+              />
               <span>Download</span>
             </button>
           </div>
-        </div>
-        <div className="right-0">
-          <img
-            class="w-100 h-100 right-0"
-            src="/img/download.png"
-            alt="Rounded avatar"
-          />
         </div>
       </div>
     </>
