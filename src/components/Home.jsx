@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Navbar from "./Navbar";
+import Navbar from "./common/Navbar";
 
-export default function About() {
+export default function Home() {
   return (
     <>
-      <Navbar />
-      <div className="flex px-10 py-20 md:flex-row flex-col items-center  bg-backGround h-screen w-screen">
+      <Navbar rollAvatar={true} />
+      <div className="flex px-10 py-20 md:flex-row flex-col items-center  bg-backGround h-screen ">
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-aboutText">
             Hi, I'm Sreenath P.

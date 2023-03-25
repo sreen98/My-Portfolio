@@ -1,7 +1,7 @@
 import { CodeIcon } from "@heroicons/react/solid";
 import React from "react";
 import { projects } from "../data/Data";
-import Navbar from "./Navbar";
+import Navbar from "./common/Navbar";
 
 export default function Experience() {
   return (

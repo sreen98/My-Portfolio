@@ -16,7 +16,8 @@ import {
 } from "react-icons/si";
 import { IconContext } from "react-icons";
 import { GiSkills } from "react-icons/gi";
-import Navbar from "./Navbar";
+import Navbar from "./common/Navbar";
+import { Roll, Rotate } from "react-awesome-reveal";
 
 export default function Skills() {
   useEffect(() => {
@@ -86,15 +87,18 @@ export default function Skills() {
                 {skills.map((skill) => (
                   <div key={skill} className="p-2 sm:w-1/2 w-full">
                     <div className="bg-gray-800 rounded flex p-4 h-full items-center">
-                      <IconContext.Provider
-                        value={{ color: "#5D9C59", size: "2rem" }}
-                      >
-                        {handleIcon(skill)}
-                      </IconContext.Provider>
-
-                      <span className="title-font font-medium text-white px-4">
-                        {skill}
-                      </span>
+                      <Roll>
+                        <IconContext.Provider
+                          value={{ color: "#5D9C59", size: "2rem" }}
+                        >
+                          {handleIcon(skill)}
+                        </IconContext.Provider>
+                      </Roll>
+                      <Rotate>
+                        <span className="title-font font-medium text-white px-4">
+                          {skill}
+                        </span>
+                      </Rotate>
                     </div>
                   </div>
                 ))}
@@ -112,15 +116,18 @@ export default function Skills() {
                 {tools.map((skill) => (
                   <div key={skill} className="p-2 sm:w-1/2 w-full">
                     <div className="bg-gray-800 rounded flex p-4 h-full items-center">
-                      <IconContext.Provider
-                        value={{ color: "#5D9C59", size: "2rem" }}
-                      >
-                        {handleIcon(skill)}
-                      </IconContext.Provider>
-
-                      <span className="title-font font-medium text-white px-4">
-                        {skill}
-                      </span>
+                      <Roll>
+                        <IconContext.Provider
+                          value={{ color: "#5D9C59", size: "2rem" }}
+                        >
+                          {handleIcon(skill)}
+                        </IconContext.Provider>
+                      </Roll>
+                      <Rotate>
+                        <span className="title-font font-medium text-white px-4">
+                          {skill}
+                        </span>
+                      </Rotate>
                     </div>
                   </div>
                 ))}

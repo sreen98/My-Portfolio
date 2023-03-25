@@ -1,5 +1,6 @@
 import React from "react";
-import Navbar from "./Navbar";
+import Navbar from "./common/Navbar";
+import { Flip } from "react-awesome-reveal";
 
 function Resume() {
   const onButtonClick = () => {
@@ -26,19 +27,21 @@ function Resume() {
           <h2>Please click below button to download my Resume</h2>
         </div>
         <div className="px-5 py-50 row-start-2  items-center justify-center p-5">
-          <div className="text-center mb-10">
-            <button
-              class="bg-downloadButton1 hover:bg-blue-400 text-gray-800 font-bold m-3 py-2 px-4 rounded inline-flex items-center"
-              onClick={() => onButtonClick()}
-            >
-              <img
-                class="w-5 h-5 mr-2 "
-                src="/img/download.png"
-                alt="Rounded avatar"
-              />
-              <span>Download</span>
-            </button>
-          </div>
+          <Flip>
+            <div className="text-center mb-10">
+              <button
+                class="bg-downloadButton1 hover:bg-blue-400 text-gray-800 font-bold m-3 py-2 px-4 rounded inline-flex items-center"
+                onClick={() => onButtonClick()}
+              >
+                <img
+                  class="w-5 h-5 mr-2 "
+                  src="/img/download.png"
+                  alt="Rounded avatar"
+                />
+                <span>Download</span>
+              </button>
+            </div>
+          </Flip>
         </div>
       </div>
     </>

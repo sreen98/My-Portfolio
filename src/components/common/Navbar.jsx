@@ -1,16 +1,13 @@
 import React from "react";
+import { Roll } from "react-awesome-reveal";
 import { Link } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar({ rollAvatar = false }) {
   return (
     <header className=" md:sticky top-0 z-10 bg-navBarBG">
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <>
-          <img
-            class="w-10 h-10 rounded-full"
-            src="/img/avatar.png"
-            alt="Rounded avatar"
-          />
+          <Avathar flag={rollAvatar} />
           <a className="title-font font-medium  mb-4 md:mb-0  text-navBarName">
             <a href="/" className="ml-3 text-xl">
               Sreenath P
@@ -50,7 +47,9 @@ export default function Navbar() {
               src="/icons/india.png"
               alt="indianflag"
             />
-            <span className="ml-2">+91-7907919037</span>
+            <span className="ml-2">
+              <a href="tel:7907919037">+91-7907919037</a>
+            </span>
           </div>
           <div className="inline-flex items-center bg-gray-800 mr-2 border-0 py-1  focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0 ml-1">
             <Link to="/contactinfo">Contact Me</Link>
@@ -61,3 +60,25 @@ export default function Navbar() {
     </header>
   );
 }
+
+const Avathar = ({ flag }) => {
+  return (
+    <div className="w-10 h-10">
+      {flag ? (
+        <Roll>
+          <img
+            className="rounded-full"
+            src="/img/avatar.png"
+            alt="Rounded avatar"
+          />
+        </Roll>
+      ) : (
+        <img
+          className="rounded-full"
+          src="/img/avatar.png"
+          alt="Rounded avatar"
+        />
+      )}
+    </div>
+  );
+};
