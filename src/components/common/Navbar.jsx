@@ -8,19 +8,22 @@ export default function Navbar({ rollAvatar = false }) {
       <div className="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
         <>
           <Avathar flag={rollAvatar} />
-          <a className="title-font font-medium  mb-4 md:mb-0  text-navBarName">
+          <a
+            className="title-font font-medium  mb-4 md:mb-0  text-navBarName"
+            href="/"
+          >
             <a href="/" className="ml-3 text-xl">
               Sreenath P
             </a>
           </a>
         </>
         <nav className="md:mr-auto md:ml-4 md:py-1 md:pl-4 md:border-l md:border-gray-700	flex flex-wrap items-center text-base justify-center ">
-          <div className="inline-flex items-center border-0 py-1 mr-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0 ">
+          {/* <div className="inline-flex items-center border-0 py-1 mr-3 focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0 ">
             <img className="h-5 w-5" src="/icons/portfolio.png" alt="call" />
             <Link to="/experience" className="ml-1  hover:text-white">
               Experience
             </Link>
-          </div>
+          </div> */}
           <div className="inline-flex items-center border-0 py-1 mr-3  focus:outline-none hover:bg-gray-700 rounded text-base mt-4 md:mt-0 ">
             <img className="h-5 w-5" src="/icons/skills.png" alt="call" />
             <Link to="/skills" className="ml-1  hover:text-white">
